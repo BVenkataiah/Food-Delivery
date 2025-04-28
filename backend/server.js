@@ -10,9 +10,8 @@ import orderRouter from "./routes/orderRoute.js";
 
 
 // app config
- 
 const app = express()
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // db connection
 await connectDB()
@@ -35,7 +34,6 @@ app.get("/",(req,res)=>{
     res.send("API Working")
 })
 
-app.listen(port,()=>{
-    console.log(`server started running on ${port}`);
-    
+app.listen(port, () => {
+    console.log(`server listening on port ${port}`)   
 })
